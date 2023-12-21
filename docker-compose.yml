@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nats:
+    image: nats:latest
+    command: -D --js --sd /data
+    ports:
+      - 4222:4222
+    restart: unless-stopped
+    mem_limit: 4G
+    mem_reservation: 4G
+    cpus: 2.0
