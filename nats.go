@@ -111,22 +111,6 @@ func main() {
 	wg.Wait() // Wait for all publishing goroutines to finish
 	pubDuration := time.Since(pubStart)
 	subWg.Wait()
-	//	for {
-	//		msg, err := sub.NextMsg(1 * time.Second)
-	//		//if err == nats.ErrTimeout {
-	//		//	break // Exit loop after 1 second of inactivity
-	//		//}
-	//		if err != nil {
-	//			log.Fatal(err)
-	//		}
-	//		msg.Ack()
-	//		received++
-	//		if received == int64(total_messages) {
-	//			fmt.Println("Received all messages")
-	//			break
-	//		}
-	//		fmt.Printf("Received message\n") //: %s\n", string(msg.Data))
-	//	}
 
 	duration := time.Since(startTime)
 
